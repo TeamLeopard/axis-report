@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 const articleController = require('./db/articleController');
 const newsAPI = require('./db/newsAPI');
 
-mongoose.connect(`mongodb://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@ds044887.mlab.com:44887/news`);
+mongoose.connect(`mongodb://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@ds044667.mlab.com:44667/axis-report`);
 mongoose.connection.once('open', () => {
     console.log('Connected with MongoDB MLab');
 });
