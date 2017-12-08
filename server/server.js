@@ -22,6 +22,5 @@ app.get('/api/articles', newsAPI.apiQuery, articleController.addToQueries, artic
 
 app.get('/api/top', newsAPI.apiHeadlines, articleController.addToHeadlines, articleController.timeoutRemoveHeadlines);
 
-
 app.listen(port);
 console.log(`Server started on PORT:${port}`);
