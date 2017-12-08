@@ -20,6 +20,10 @@ export const filterArticles = () => ({
   type: types.FILTER_ARTICLES,
 });
 
+export const filterContent = () => ({
+  type: types.FILTER_CONTENT,
+});
+
 export function handleKeyPress(event) {
   return function (dispatch, getState) {
     if (event.charCode === 13) {
@@ -50,7 +54,7 @@ export const fetchPosts = () => ({
 export function onLoad() {
   return function (dispatch, getState) {
     // const stateText = getState().steering.textValue;
-    const request = new Request(`http://localhost:3000/api/top`);
+    const request = new Request('http://localhost:3000/api/top');
     return fetch(request)
       .then(response => response.json())
       .then(json => dispatch(searchArticles(json)))
