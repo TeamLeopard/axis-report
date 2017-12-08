@@ -16,12 +16,25 @@ export const sliderChange = (value) => ({
   payload: value,
 });
 
+export const verticalSliderChange = (value) => ({
+  type: types.VERTICAL_SLIDER_CHANGE,
+  payload: value,
+});
+
 export const filterArticles = () => ({
   type: types.FILTER_ARTICLES,
 });
 
-export const filterContent = () => ({
-  type: types.FILTER_CONTENT,
+export const filterGoodContent = () => ({
+  type: types.FILTER_GOOD_CONTENT,
+});
+
+export const reloadNews = () => ({
+  type: types.RELOAD_NEWS,
+});
+
+export const filterBadContent = () => ({
+  type: types.FILTER_BAD_CONTENT,
 });
 
 export function handleKeyPress(event) {

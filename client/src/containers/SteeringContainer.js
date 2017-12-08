@@ -25,8 +25,13 @@ class SteeringContainer extends Component {
           handleKeyPress={this.props.handleKeyPress}
         />
         <PoliticalSlider sliderValue={this.props.sliderValue} sliderChange={this.props.sliderChange} filterArticles={this.props.filterArticles} />
-        <CatagorySlider verticalSliderValue={this.props.verticalSliderValue} sliderChange={this.props.sliderChange} filterArticles={this.props.filterArticles} />
-
+        <CatagorySlider
+          verticalSliderValue={this.props.verticalSliderValue}
+          verticalSliderChange={this.props.verticalSliderChange}
+          filterBadContent={this.props.filterBadContent}
+          filterGoodContent={this.props.filterGoodContent}
+          reloadNews={this.props.reloadNews}
+        />
       </div>
     );
   };

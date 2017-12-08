@@ -1,6 +1,8 @@
 // keywords for filtering content
 module.exports = {
-  bad: [
+  bad: ['trump', "trump's", 'fire', 'fires', 'murder', 'probe', 'shooting', 'kill', 'killing', 'killed', 'die'],
+  good: ['puppy', 'puppies', 'kitten', 'kittens', 'happy', 'love'],
+  actual: [
     'abnormal',
     'abolish',
     'abominable',
