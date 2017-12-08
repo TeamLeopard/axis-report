@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Header from '../components/Header';
 import PoliticalSlider from '../components/PoliticalSlider';
+import CatagorySlider from '../components/CatagorySlider';
 import * as actions from '../actions/actions';
 // import { bindActionCreators } from 'redux'; //refactor to use bindActionCreators
 
@@ -24,6 +25,8 @@ class SteeringContainer extends Component {
           handleKeyPress={this.props.handleKeyPress}
         />
         <PoliticalSlider sliderValue={this.props.sliderValue} sliderChange={this.props.sliderChange} filterArticles={this.props.filterArticles} />
+        <CatagorySlider verticalSliderValue={this.props.verticalSliderValue} sliderChange={this.props.sliderChange} filterArticles={this.props.filterArticles} />
+
       </div>
     );
   };

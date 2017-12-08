@@ -10,16 +10,39 @@ body{
 }
 
 #sliderText {
+  position: absolute;
+  top: 260px; 
+  left: 20px;
   margin-top: -35px;
   margin-bottom: 30px;
   font-size: .8em;
 }
 
 #slider{
-  width: 60%;
+  position: absolute;
+  top: 170px; 
+  left: 10px;
+  width: 440px;
   display: grid;
   margin-left: auto;
   margin-right: auto;
+}
+#y-slider{
+  position: absolute;
+  top: 0px; 
+  left 80px;
+  height:650px;
+  display: grid;
+  margin-left: 210px;
+  margin-right: auto;
+}
+
+#y-axis-red-blue-line{
+  
+  margin-left: 7px;
+  margin-top: -339px;
+  height:127% ;
+  width: 7px;
 }
 
 #red-blue-line{
@@ -57,7 +80,8 @@ a {
    /* valid values are: flex-start, flex-end, space-between, space-around, stretch */
    -webkit-align-content: flex-end;
    align-content: flex-end;
-   margin-top:30px;
+   margin-top:350px;
+   
 }
 
 #card {
