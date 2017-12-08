@@ -19,8 +19,10 @@ const PoliticalSlider = (props) => {
       />
       <img id='red-blue-line' src={logo}/>
       <div id="sliderText">
-        Adjusting the slider modifies the political leaning of the news below. 
+        <p>Adjust the slider left or right to select the catagory</p>
+              <p>Adjust the slider up or down for feel good or bad news </p>
       </div>
+      
     </div>
   );
 };
