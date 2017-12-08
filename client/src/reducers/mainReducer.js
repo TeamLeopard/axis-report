@@ -32,33 +32,47 @@ const mainReducer = (state = initialState, action) => {
         isFetching: false,
         feedList: feedList
       }
-    case types.FILTER_CONTENT:
-      // low on slider
-      if (state.verticalSliderValue < -5) {
-        feedList = state.allFeed.reduce((acc, article) => {
-          keywords.bad.forEach((word) => {
-            if (article.source.description.includes(word)) acc.push(article);
-          });
-        }, []);
-      }
 
-      // higher on slider
-      if (state.verticalSliderValue > 5) {
-        feedList = state.allFeed.reduce((acc, article) => {
-          keywords.bad.forEach((word) => {
-            if (!article.source.description.includes(word)) acc.push(article);
-          });
-        }, []);
-      }
-      // console.log('filtered sources', sources);
+    case types.FILTER_BAD_CONTENT:
+      feedList = state.allFeed.filter((article) => {
+          if (article.description !== null) {
+            return new RegExp(keywords.bad.join("|")).test(article.description);
+          }
+      });
+
       feedList = feedList.sort((a, b) => { // sort by date so that most recent stories are on top
         return new Date(b.publishedAt) - new Date(a.publishedAt);
       });
       return {
         ...state,
         isFetching: false,
-        feedList: feedList
+        feedList,
       }
+
+    case types.FILTER_GOOD_CONTENT:
+      feedList = state.allFeed.filter((article) => {
+        if (article.description !== null) {
+          return new RegExp(keywords.good.join("|")).test(article.description);
+        }
+      });
+
+      feedList = feedList.sort((a, b) => { // sort by date so that most recent stories are on top
+        return new Date(b.publishedAt) - new Date(a.publishedAt);
+      });
+      return {
+        ...state,
+        isFetching: false,
+        feedList,
+      }
+
+    case types.RELOAD_NEWS:
+      feedList = state.allFeed.slice();
+      return {
+        ...state,
+        isFetching: false,
+        feedList,
+      }
+      // console.log('filtered sources', sources)
     case types.SEARCH_ARTICLES:
       // console.log('response is: ', action.payload);
       if (action.payload.length === 0) feedList = [];
@@ -86,6 +100,12 @@ const mainReducer = (state = initialState, action) => {
       return {
         ...state,
         sliderValue: action.payload
+      };
+
+    case types.VERTICAL_SLIDER_CHANGE:
+      return {
+        ...state,
+        veticalSliderValue: action.payload
       };
 
     case types.FETCH_POSTS:

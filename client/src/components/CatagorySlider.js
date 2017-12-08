@@ -14,8 +14,10 @@ const CatagorySlider = (props) => {
         max={10}
         value={props.verticalSliderValue}
         onChange={(e, val) => {
-          props.sliderChange(val);
-          props.filterArticles();
+          props.verticalSliderChange(val);
+          if (val > 5) props.filterGoodContent();
+          if (val < -5) props.filterBadContent();
+          if (val === 0) props.reloadNews();
         }}
       />
       
