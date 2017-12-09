@@ -10,7 +10,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = actions;
 
-export class MainContainer extends Component {
+class MainContainer extends Component {
 
   componentDidMount(){
     this.props.onLoad();
