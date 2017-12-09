@@ -13,7 +13,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = actions;
 
-class SteeringContainer extends Component {
+export class SteeringContainer extends Component {
   render() {
     return (
       <div>
