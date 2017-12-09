@@ -8,10 +8,11 @@ const CatagorySlider = (props) => {
     <div id="y-slider">
       <Slider
         axis={'y'}
-        defaultValue={0}
+        defaultValue={1}
         step={1}
         min={-10}
         max={10}
+        
         value={props.verticalSliderValue}
         onChange={(e, val) => {
           props.verticalSliderChange(val);
