@@ -7,3 +7,7 @@ require.extensions['.png'] = function () {
 };
 
 require('enzyme');
+
+require('mocha');
+require('chai');
+require('supertest');
