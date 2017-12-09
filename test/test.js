@@ -9,7 +9,7 @@ describe('Test1', () => {
 		it("return status code 200 for /api/articles", (done) => {
 			request('http://localhost:3000')
 			.get('/api/articles')
-			.expect(200,done);
+			.expect(200, done());
 		})
 	})
 })
@@ -19,7 +19,7 @@ describe('Test2', () => {
 		it("return status code 200 for /api/top", (done) => {
 			request('http://localhost:3000')
 			.get('/api/top')
-			.expect(200,done);
+			.expect(200, done());
 		})
 	})
 })
