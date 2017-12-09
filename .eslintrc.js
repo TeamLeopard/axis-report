@@ -1,5 +1,8 @@
 module.exports = {
   "extends": "airbnb",
+  "env": {
+    "mocha": true,
+  },
   "rules": {
       "no-tabs": "off",
       "linebreak-style": "off",

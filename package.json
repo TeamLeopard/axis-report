@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon ./server/server.js",
     "build": "./node_modules/.bin/webpack -w",
-    "test": "mocha"
+    "test": "mocha --compilers js:babel-register --require test/index.js"
   },
   "author": "Henry Au",
   "license": "MIT",
@@ -33,22 +33,28 @@
   "devDependencies": {
     "babel-core": "^6.10.4",
     "babel-loader": "^6.2.4",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-react": "^6.11.0",
     "babel-preset-stage-0": "^6.24.1",
     "babel-register": "^6.7.2",
     "babelify": "^7.2.0",
+    "chai": "^4.1.2",
     "css-loader": "^0.23.1",
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-16": "^1.1.0",
     "eslint": "^2.13.1",
     "eslint-config-airbnb": "^9.0.1",
     "eslint-plugin-import": "^1.10.0",
     "eslint-plugin-jsx-a11y": "^1.5.3",
     "eslint-plugin-react": "^5.2.2",
     "file-loader": "^1.1.5",
+    "mocha": "^4.0.1",
     "node-sass": "^3.8.0",
     "nodemon": "^1.12.1",
     "redux-devtools": "^3.4.1",
     "sass-loader": "^3.2.2",
+    "sinon": "^4.1.3",
     "style-loader": "^0.13.1",
     "supertest": "^3.0.0"
   }
