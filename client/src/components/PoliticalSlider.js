@@ -12,7 +12,6 @@ const PoliticalSlider = (props) => {
         min={-10}
         max={10}
         value={props.sliderValue}
-        ref="slide"
         onChange={(e, val) => {
           props.sliderChange(val);
           props.filterArticles();
@@ -28,10 +27,7 @@ const PoliticalSlider = (props) => {
           <p>Adjust the slider left or right to select the catagory</p>
           <p>Adjust the slider up or down for feel good or bad news </p>
         </div>
-
-
       </div>
-      
     </div>
   );
 };

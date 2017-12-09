@@ -6,8 +6,7 @@ configure({ adapter: new Adapter() });
 
 import { SteeringContainer } from '../client/src/containers/SteeringContainer';
 import Header from '../client/src/components/Header';
-import PoliticalSlider from '../client/src/components/PoliticalSlider';
-import CatagorySlider from '../client/src/components/CatagorySlider';
+import SlidersContainer from '../client/src/containers/SlidersContainer';
 
 describe('<SteeringContainer />', () => {
   let wrapper;
@@ -21,7 +20,6 @@ describe('<SteeringContainer />', () => {
   });
 
   it('renders a Political and Category Slider', () => {
-    expect(wrapper.find(PoliticalSlider).length).to.equal(1);
-    expect(wrapper.find(CatagorySlider).length).to.equal(1);
+    expect(wrapper.find(SlidersContainer).length).to.equal(1);
   });
 });
