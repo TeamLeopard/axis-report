@@ -29,7 +29,7 @@ describe('Test3', () => {
 		it("return status code 404 for a random path", (done) => {
 			request('http://localhost:3000')
 			.get('/api/down')
-			.expect(404,done);
+			.expect(404, done);
 		})
 	})
 })
