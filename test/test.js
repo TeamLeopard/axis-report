@@ -28,4 +28,14 @@ describe('Test2', () => {
 	})
 })
 
+describe('Test3', () => {
+	describe("GET", () => {
+		it("return status code 404 for a random path", (done) => {
+			request('http://localhost:3000')
+			.get('/api/down')
+			.expect(404,done);
+		})
+	})
+})
+
 //supertests

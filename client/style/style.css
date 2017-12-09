@@ -80,7 +80,7 @@ a {
    /* valid values are: flex-start, flex-end, space-between, space-around, stretch */
    -webkit-align-content: flex-end;
    align-content: flex-end;
-   margin-top:350px;
+   margin-top:240px;
    
 }
 
